@@ -1,5 +1,8 @@
 package store.controller;
 
+import store.domain.PromotionCatalog;
+import store.domain.Stock;
+import store.io.FileReader;
 import store.view.OutputView;
 
 public class StoreController {
@@ -13,6 +16,10 @@ public class StoreController {
     }
 
     public void process() {
+        FileReader fileReader = new FileReader();
+        PromotionCatalog promotionCatalog = fileReader.readPromotionCatalogFromFile();
+        Stock stock = fileReader.readStockFromFile(promotionCatalog);
+
 
     }
 

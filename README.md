@@ -4,7 +4,7 @@
 
 ### 편의점 전체 기능
 
-- [ ] src/main/resources/products.md 를 읽어 상품 목록을 로드한다.
+- [x] src/main/resources/products.md 를 읽어 상품 목록을 로드한다.
 - [x] src/main/resources/promotions.md 를 읽어 프로모션 목록을 로드한다.
 
 - [ ] 인사와 함께 상품명, 가격, 재고, 프로모션 이름을 출력한다.
