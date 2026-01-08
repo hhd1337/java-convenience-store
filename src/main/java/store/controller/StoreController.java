@@ -20,7 +20,9 @@ public class StoreController {
         PromotionCatalog promotionCatalog = fileReader.readPromotionCatalogFromFile();
         Stock stock = fileReader.readStockFromFile(promotionCatalog);
 
+        outputView.printHelloAndStock(stock.getProductCountMap());
 
+        
     }
 
 

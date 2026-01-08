@@ -8,4 +8,9 @@ public class Stock {
     public Stock(Map<Product, Integer> productCountMap) {
         this.productCountMap = productCountMap;
     }
+
+    public Map<Product, Integer> getProductCountMap() {
+        return productCountMap;
+    }
+
 }

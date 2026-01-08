@@ -75,11 +75,14 @@ public class FileReader {
                         Promotion promotion = promotionCatalog.findPromotionByNameOrNull(splitedLine[3].trim());
 
                         Product product = new Product(name, price, promotion);
-
                         productCountMap.put(product, quantity);
-                        System.out.println(productCountMap);
-                    });
+                        // 프로모션 SKU면, 일반 SKU를 "없으면" 0으로 보강
+                        if (promotion != null) {
+                            Product normal = new Product(name, price, null);
+                            productCountMap.putIfAbsent(normal, 0);
+                        }
 
+                    });
             return new Stock(productCountMap);
         } catch (IOException e) {
             throw new IllegalArgumentException(FILE_NAME + "파일을 읽는 과정에서 문제가 발생했습니다.");
