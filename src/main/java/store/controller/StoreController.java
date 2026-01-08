@@ -1,5 +1,6 @@
 package store.controller;
 
+import store.domain.Order;
 import store.domain.PromotionCatalog;
 import store.domain.Stock;
 import store.io.FileReader;
@@ -22,7 +23,9 @@ public class StoreController {
 
         outputView.printHelloAndStock(stock.getProductCountMap());
 
-        
+        outputView.printOrderInputPrompt();
+        Order order = inputHandler.inputOrder(stock);
+
     }
 
 

@@ -1,11 +1,19 @@
 package store.domain;
 
 public class OrderProduct {
-    private Product product;
+    private String productName;
     private int count;
 
-    public OrderProduct(Product product, int count) {
-        this.product = product;
+    public OrderProduct(String productName, int count) {
+        this.productName = productName;
         this.count = count;
+    }
+
+    public String getProductName() {
+        return productName;
+    }
+
+    public int getCount() {
+        return count;
     }
 }

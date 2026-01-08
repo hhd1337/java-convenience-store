@@ -4,7 +4,7 @@ import camp.nextstep.edu.missionutils.Console;
 
 public class InputView {
 
-    public String inputX() {
+    public String inputOrder() {
         return Console.readLine();
     }
 }

@@ -4,12 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DelimiterParser {
-    private static final String DELIMITER = ",";
+    // private static final String DELIMITER = ",";
 
-    public List<String> parse(String input) {
+    public List<String> parse(String input, String delimiter) {
         validateBlankAndNull(input);
 
-        String[] parts = input.split(DELIMITER);
+        String[] parts = input.split(delimiter);
 
         List<String> result = new ArrayList<>();
         for (String part : parts) {
